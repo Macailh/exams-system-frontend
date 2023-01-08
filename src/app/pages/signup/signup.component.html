@@ -6,35 +6,36 @@
           <mat-icon>perm_identity</mat-icon>
         </div>
         <h1 class="text-center">Registrate aqui</h1>
-        <form action="">
+        <form (ngSubmit) = "formSubmit()">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label> Nombre de usuario </mat-label>
-            <input matInput placeholder="Nombre de usuario">
+            <input matInput placeholder="Nombre de usuario" [(ngModel)] = "user.username" name="username">
+            <mat-hint>El nombre de usuario debe de ser único</mat-hint>
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Contraseña</mat-label>
-            <input type="password" matInput placeholder="Contraseña">
+            <input type="password" matInput placeholder="Contraseña" [(ngModel)] = "user.password" name="password">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Nombre">
+            <input matInput placeholder="Nombre" [(ngModel)] = "user.name" name="name">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Apellido</mat-label>
-            <input matInput placeholder="Aepllido">
+            <input matInput placeholder="Aepllido" [(ngModel)]="user.lastname" name="lastname">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Email">
+            <input type="email" matInput placeholder="Email" [(ngModel)]="user.email" name="email">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Teléfono</mat-label>
-            <input matInput placeholder="Teléfono">
+            <input matInput placeholder="Teléfono" [(ngModel)]="user.phone" name="phone">
           </mat-form-field>
 
           <div class="container text-center">
