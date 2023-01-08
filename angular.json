@@ -27,7 +27,7 @@
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css",
-              "./node_modules/bootstrap-grid-only/dist/css/bootstrap-grid.min.css"
+              "./node_modules/bootstrap-grid-only/bootstrap.css"
             ],
             "scripts": []
           },
