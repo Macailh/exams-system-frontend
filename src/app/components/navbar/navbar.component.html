@@ -1,1 +1,28 @@
-<div class="text-center"><p>navbar works!</p></div>
+<mat-toolbar color="primary">
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="icon"
+  >
+    <mat-icon>menu_books</mat-icon>
+  </a>
+
+  <span>Portal de exámenes</span>
+  <span class="spacer"></span>
+
+  <a
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="icon favorite-icon"
+  >
+    Iniciar sesión
+  </a>
+
+  <a
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="icon favorite-icon mr20 ml70"
+  >
+    Registrar
+  </a>
+</mat-toolbar>
