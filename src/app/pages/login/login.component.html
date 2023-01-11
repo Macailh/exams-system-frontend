@@ -5,11 +5,16 @@
         <div class="container text-center">
           <mat-icon>perm_identity</mat-icon>
         </div>
+        <div class="container text-center">
+          <h1>hola que hacer</h1>
+          <mat-icon>perm_identity</mat-icon>
+        </div>
         <h1 class="text-center">Inicio de sesión</h1>
-        <form action="">
+        <form (ngSubmit)="formSubmit()">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label> Nombre de usuario </mat-label>
             <input
+              [(ngModel)] = "loginData.username"
               matInput
               placeholder="Nombre de usuario"
               name="username"
@@ -21,6 +26,7 @@
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Contraseña</mat-label>
             <input
+              [(ngModel)] = "loginData.password"
               type="password"
               matInput
               placeholder="Contraseña"
@@ -30,7 +36,7 @@
             <mat-hint>La contraseña no puede estar vacia</mat-hint>
           </mat-form-field>
           <br /><br /><br />
-          <div class="container text-center">
+          <div class="container">
             <button mat-raised-button color="primary">Iniciar sesión</button>
             <button
               type="reset"
