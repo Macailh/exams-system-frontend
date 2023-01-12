@@ -1,9 +1,5 @@
 <mat-toolbar color="primary">
-  <a
-    [routerLink]="'/'"
-    mat-icon-button
-    class="icon"
-  >
+  <a [routerLink]="'/'" mat-icon-button class="icon">
     <mat-icon>menu_books</mat-icon>
   </a>
 
@@ -11,6 +7,7 @@
   <span class="spacer"></span>
 
   <a
+    *ngIf="!loginService.isLoggedIn()"
     [routerLink]="'/login'"
     mat-icon-button
     class="icon favorite-icon"
@@ -19,10 +16,27 @@
   </a>
 
   <a
+    *ngIf="!loginService.isLoggedIn()"
     [routerLink]="'/signup'"
     mat-icon-button
     class="icon favorite-icon mr20 ml70"
   >
     Registrar
   </a>
+
+  <a
+    *ngIf="loginService.isLoggedIn()"
+    (click)="logout()"
+    mat-icon-button
+    class="icon favorite-icon"
+  >
+    Cerrar sesión
+  </a>
+  <button
+    *ngIf="loginService.isLoggedIn()"
+    mat-button
+    class="icon favorite-icon mr20 ml70"
+  >
+    {{ loginService.getUser().username }}
+  </button>
 </mat-toolbar>
