@@ -1,54 +1,43 @@
-<div class="bootstrap-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="container text-center">
-          <mat-icon>perm_identity</mat-icon>
-        </div>
-        <div class="container text-center">
-          <h1>hola que hacer</h1>
-          <mat-icon>perm_identity</mat-icon>
-        </div>
-        <h1 class="text-center">Inicio de sesión</h1>
-        <form (ngSubmit)="formSubmit()">
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label> Nombre de usuario </mat-label>
-            <input
-              [(ngModel)] = "loginData.username"
-              matInput
-              placeholder="Nombre de usuario"
-              name="username"
-              required
-            />
-            <mat-hint>El nombre de usuario debe de ser valido</mat-hint>
-          </mat-form-field>
+<div class="container">
+  <div class="form-wrapper">
+    <h1 class="text-center">Inicio de sesión</h1>
+    <form (ngSubmit)="formSubmit()">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label> Nombre de usuario </mat-label>
+        <input
+          [(ngModel)]="loginData.username"
+          matInput
+          placeholder="Nombre de usuario"
+          name="username"
+          required
+        />
+        <mat-hint>El nombre de usuario debe de ser valido</mat-hint>
+      </mat-form-field>
 
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Contraseña</mat-label>
-            <input
-              [(ngModel)] = "loginData.password"
-              type="password"
-              matInput
-              placeholder="Contraseña"
-              name="password"
-              required
-            />
-            <mat-hint>La contraseña no puede estar vacia</mat-hint>
-          </mat-form-field>
-          <br /><br /><br />
-          <div class="container">
-            <button mat-raised-button color="primary">Iniciar sesión</button>
-            <button
-              type="reset"
-              mat-raised-button
-              color="accent"
-              style="margin-left: 20px"
-            >
-              Limpiar
-            </button>
-          </div>
-        </form>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input
+          [(ngModel)]="loginData.password"
+          type="password"
+          matInput
+          placeholder="Contraseña"
+          name="password"
+          required
+        />
+        <mat-hint>La contraseña no puede estar vacia</mat-hint>
+      </mat-form-field>
+      <br /><br /><br />
+      <div class="button-wrapper">
+        <button mat-raised-button color="primary">Iniciar sesión</button>
+        <button
+          type="reset"
+          mat-raised-button
+          color="accent"
+          style="margin-left: 20px"
+        >
+          Limpiar
+        </button>
       </div>
-    </div>
+    </form>
   </div>
 </div>
