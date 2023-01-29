@@ -28,7 +28,7 @@
   <a *ngIf="loginService.isLoggedIn()" (click)="logout()" mat-button class="">
     Cerrar sesión
   </a>
-  <button *ngIf="loginService.isLoggedIn()" mat-button class="">
+  <button *ngIf="loginService.isLoggedIn()" [routerLink]="'admin/profile'" mat-button class="" >
     {{ loginService.getUser().username }}
   </button>
 </mat-toolbar>
