@@ -1,14 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+}
 
-.container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.3em;
+.container, 
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media all and (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .main {
+        flex: 3;
+        order: 2;
+        min-height: 80vh;
+    }
+    .left-sidebar {
+        order: 1;
+        flex: 1;
+    }
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
 }
 
 .form-wrapper {
@@ -16,7 +42,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   place-items: center;
 }
 
-.form-wrapper form{
+.form-wrapper form {
   max-width: 500px;
 }
 
@@ -25,51 +51,46 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   justify-content: center;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.full-width{
+.full-width {
   width: 100%;
 }
 
-.navbar {
-
-
-}
-
-.ml20{
+.ml20 {
   margin-left: 20px !important;
 }
 
-.mr20{
+.mr20 {
   margin-right: 20px !important;
 }
 
-.mt20{
+.mt20 {
   margin-top: 20px !important;
 }
 
-.mb20{
+.mb20 {
   margin-bottom: 20px !important;
 }
 
-.ml10{
+.ml10 {
   margin-left: 10px !important;
 }
 
-.mr10{
+.mr10 {
   margin-right: 10px !important;
 }
 
-.mt10{
+.mt10 {
   margin-top: 10px !important;
 }
 
-.mb10{
+.mb10 {
   margin-bottom: 10px !important;
 }
 
-.ml70{
+.ml70 {
   margin-left: 70px !important;
 }
