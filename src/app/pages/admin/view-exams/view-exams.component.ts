@@ -7,43 +7,43 @@ import Swal from 'sweetalert2';
   templateUrl: './view-exams.component.html',
   styleUrls: ['./view-exams.component.css']
 })
-export class ViewExamsComponent implements OnInit{
-  exams:any = []
+export class ViewExamsComponent implements OnInit {
+  exams: any = []
 
-  constructor(private examService:ExamService) {}
-   
+  constructor(private examService: ExamService) { }
+
   ngOnInit(): void {
     this.examService.listExams().subscribe(
-      (dato:any) => {
-        this.exams = dato;
+      (data: any) => {
+        this.exams = data;
         console.log(this.exams);
       },
       (error) => {
         console.log(error);
-        Swal.fire('Error','Error al cargar los exámenes','error');
+        Swal.fire('Error', 'Error al cargar los exámenes', 'error');
       }
     )
   }
 
-  eliminarExamen(id:any){
+  deleteExam(id: any) {
     Swal.fire({
-      title:'Eliminar examen',
-      text:'¿Estás seguro de eliminar el examen?',
-      icon:'warning',
-      showCancelButton:true,
-      confirmButtonColor:'#3085d6',
-      cancelButtonColor:'#d33',
-      confirmButtonText:'Eliminar',
-      cancelButtonText:'Cancelar'
+      title: 'Eliminar examen',
+      text: '¿Estás seguro de eliminar el examen?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar'
     }).then((result) => {
-      if(result.isConfirmed){
+      if (result.isConfirmed) {
         this.examService.deleteExam(id).subscribe(
           (data) => {
-            this.exams = this.exams.filter((examen:any) => examen.id != id);
-            Swal.fire('Examen eliminado','El examen ha sido eliminado de la base de datos','success');
+            this.exams = this.exams.filter((examen: any) => examen.id != id);
+            Swal.fire('Examen eliminado', 'El examen ha sido eliminado de la base de datos', 'success');
           },
           (error) => {
-            Swal.fire('Error','Error al eliminar el examen','error');
+            Swal.fire('Error', 'Error al eliminar el examen', 'error');
           }
         )
       }

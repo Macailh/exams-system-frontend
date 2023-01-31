@@ -1,26 +1,45 @@
+<mat-card *ngFor="let e of exams">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>
+      {{ e.title }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ e.category.title }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-flat-button
+        color="primary"
+        [routerLink]="'/admin/ver-preguntas/' + e.id + '/' + e.title"
+      >
+        Preguntas
+      </button>
+      <button mat-stroked-button color="primary">
+        Puntos máximos {{ e.maxPoints }}
+      </button>
+      <button mat-stroked-button color="primary">
+        Preguntas {{ e.numberOfQuestions }}
+      </button>
+      <button
+        [routerLink]="'/admin/exam/' + e.id"
+        mat-flat-button
+        color="primary"
+      >
+        Actualizar
+      </button>
+      <button mat-flat-button color="primary">Intentos</button>
+      <button mat-flat-button color="warn" (click)="deleteExam(e.id)">
+        Eliminar
+      </button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
 
-<mat-card *ngFor = "let e of exams">
-    <mat-card-header>
-      <div mat-card-avatar></div>
-        <mat-card-title>
-          {{ e.title }}
-        </mat-card-title>
-        <mat-card-subtitle>
-          {{ e.category.title }}
-        </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-card-actions>
-        <button mat-flat-button color="primary" [routerLink] = "'/admin/ver-preguntas/'+e.examenId+'/'+e.titulo">Preguntas</button>
-        <button mat-stroked-button color="primary">Puntos máximos {{ e.maxPoints }}</button>
-        <button mat-stroked-button color="primary">Preguntas {{ e.numberOfQuestions }}</button>
-        <button [routerLink] = "'/admin/examen/'+e.examenId" mat-flat-button color="primary">Actualizar</button>
-        <button mat-flat-button color="primary">Intentos</button>
-        <button mat-flat-button color="warn" (click) = "eliminarExamen(e.examenId)">Eliminar</button>
-      </mat-card-actions>
-    </mat-card-content>
-  </mat-card>
-  
-  <div>
-    <button routerLink="/admin/add-examen" mat-raised-button color="primary">Agregar cuestionario</button>
-  </div>
+<div>
+  <button routerLink="/admin/add-exam" mat-raised-button color="primary">
+    Agregar cuestionario
+  </button>
+</div>
