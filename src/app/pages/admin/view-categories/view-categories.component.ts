@@ -7,23 +7,23 @@ import Swal from 'sweetalert2';
   templateUrl: './view-categories.component.html',
   styleUrls: ['./view-categories.component.css']
 })
-export class ViewCategoriesComponent implements OnInit{
-  categories:any = [
+export class ViewCategoriesComponent implements OnInit {
+  categories: any = [
   ]
 
-  constructor(private categoryService:CategoryService) {
+  constructor(private categoryService: CategoryService) {
 
   }
 
   ngOnInit(): void {
-    this.categoryService.listCategories().subscribe(
-      (dato:any) => {
+    this.categoryService.getCategories().subscribe(
+      (dato: any) => {
         this.categories = dato;
         console.log(this.categories);
       },
       (error) => {
         console.log(error);
-        Swal.fire('Error !!','Error al cargar las categorías','error');
+        Swal.fire('Error !!', 'Error al cargar las categorías', 'error');
       }
     )
   }
