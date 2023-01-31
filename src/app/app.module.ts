@@ -12,7 +12,9 @@ import { MatInputModule } from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -30,6 +32,8 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.component';
+import { AddExamComponent } from './pages/admin/add-exam/add-exam.component';
+import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,9 @@ import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.componen
     WelcomeComponent,
     ViewCategoriesComponent,
     AddCategoryComponent,
-    ViewExamsComponent
+    ViewExamsComponent,
+    AddExamComponent,
+    UpdateExamComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,9 @@ import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.componen
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule,
+    MatSlideToggleModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
