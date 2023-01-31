@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { AddExamComponent } from './pages/admin/add-exam/add-exam.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
@@ -15,14 +17,14 @@ import { StudentGuard } from './services/student.guard';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeComponent,
     pathMatch: 'full'
   },
   {
     path: 'signup',
     component: SignupComponent,
-    pathMatch:'full'
+    pathMatch: 'full'
   },
   {
     path: 'login',
@@ -33,27 +35,35 @@ const routes: Routes = [
     path: 'admin',
     component: DashboardComponent,
     canActivate: [AdminGuard],
-    children:[
+    children: [
       {
-        path:'profile',
-        component:ProfileComponent
+        path: 'profile',
+        component: ProfileComponent
       },
       {
-        path:'',
-        component:WelcomeComponent
+        path: '',
+        component: WelcomeComponent
       },
       {
-        path:'categories',
-        component:ViewCategoriesComponent
+        path: 'categories',
+        component: ViewCategoriesComponent
       },
       {
-        path:'add-category',
-        component:AddCategoryComponent
+        path: 'add-category',
+        component: AddCategoryComponent
       },
       {
         path: 'exams',
         component: ViewExamsComponent
-      }
+      },
+      {
+        path: 'add-exam',
+        component: AddExamComponent
+      },
+      {
+        path: 'exam/:id',
+        component: UpdateExamComponent
+      },
     ]
   },
   {
