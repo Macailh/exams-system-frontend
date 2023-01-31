@@ -2,6 +2,7 @@
   <mat-card-header>
     <div mat-card-avatar></div>
     <mat-card-title>
+      {{ e.id }}
       {{ e.title }}
     </mat-card-title>
     <mat-card-subtitle>
@@ -13,7 +14,7 @@
       <button
         mat-flat-button
         color="primary"
-        [routerLink]="'/admin/ver-preguntas/' + e.id + '/' + e.title"
+        [routerLink]="'/admin/questions/' + e.id + '/' + e.title"
       >
         Preguntas
       </button>
