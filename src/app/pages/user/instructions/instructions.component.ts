@@ -31,7 +31,7 @@ export class InstructionsComponent {
     )
   }
 
-  empezarExamen() {
+  startExam() {
     Swal.fire({
       title: '¿Quieres comenzar el examen?',
       showCancelButton: true,
