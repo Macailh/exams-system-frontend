@@ -38,7 +38,7 @@ export class UpdateQuestionComponent implements OnInit {
     this.questionService.updateQuestion(this.question).subscribe(
       (data) => {
         Swal.fire('Pregunta actualizada', 'La pregunta ha sido actualizada con éxito', 'success').then((e) => {
-          this.router.navigate(['/admin/ver-preguntas/' + this.question.exam.examId + '/' + this.question.exam.title]);
+          this.router.navigate(['/admin/questions/' + this.question.exam.id + '/' + this.question.exam.title]);
         })
       }
     )
