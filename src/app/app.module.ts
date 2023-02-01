@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -40,6 +41,7 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
 import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,8 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
     AddQuestionComponent,
     SidebarUserComponent,
     LoadExamComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
     MatToolbarModule,
     MatListModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatProgressSpinnerModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
