@@ -30,10 +30,10 @@ export class QuestionService {
   }
 
   public getQuestionFromExamForTest(id: any) {
-    return this.http.get(`${baseUrl}/questions/examen/${id}`);
+    return this.http.get(`${baseUrl}/questions/exam/${id}`);
   }
 
-  public evaluarExamen(questions: any) {
+  public evaluateExam(questions: any) {
     return this.http.post(`${baseUrl}/questions/evaluate-exam`, questions);
   }
 }
