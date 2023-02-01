@@ -37,6 +37,9 @@ import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.compo
 import { ViewExamQuestionComponent } from './pages/admin/view-exam-question/view-exam-question.component';
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
+import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
     UpdateExamComponent,
     ViewExamQuestionComponent,
     UpdateQuestionComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    SidebarUserComponent,
+    LoadExamComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
