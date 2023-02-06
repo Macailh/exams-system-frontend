@@ -16,6 +16,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.content mat-card {
+  min-height: 90vh;
+}
 
 .main {
   padding: 15px;
@@ -23,10 +26,6 @@ body {
 
 .left-sidebar {
   padding: 15px;
-}
-
-.left-sidebar mat-card {
-  min-height: 90vh;
 }
 
 .right-sidebar {
@@ -74,40 +73,4 @@ body {
 
 .full-width {
   width: 100%;
-}
-
-.ml20 {
-  margin-left: 20px !important;
-}
-
-.mr20 {
-  margin-right: 20px !important;
-}
-
-.mt20 {
-  margin-top: 20px !important;
-}
-
-.mb20 {
-  margin-bottom: 20px !important;
-}
-
-.ml10 {
-  margin-left: 10px !important;
-}
-
-.mr10 {
-  margin-right: 10px !important;
-}
-
-.mt10 {
-  margin-top: 10px !important;
-}
-
-.mb10 {
-  margin-bottom: 10px !important;
-}
-
-.ml70 {
-  margin-left: 70px !important;
 }
