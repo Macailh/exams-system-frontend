@@ -25,6 +25,10 @@ body {
   padding: 15px;
 }
 
+.left-sidebar mat-card {
+  min-height: 90vh;
+}
+
 .right-sidebar {
   padding: 15px;
 }
@@ -37,11 +41,12 @@ body {
   .main {
     flex: 3;
     order: 2;
-    min-height: 80vh;
+    min-height: 90vh;
   }
   .left-sidebar {
     order: 1;
     flex: 1;
+    min-height: 90vh;
   }
   .right-sidebar {
     flex: 1;
