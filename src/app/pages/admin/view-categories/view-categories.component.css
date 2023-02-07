@@ -1,0 +1,9 @@
+mat-list {
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+mat-icon {
+  margin-right: 24px !important;
+}
