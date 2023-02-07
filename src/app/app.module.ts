@@ -88,7 +88,7 @@ import { StartComponent } from './pages/user/start/start.component';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     NgxUiLoaderModule,
-    NgxUiLoaderHttpModule
+    NgxUiLoaderHttpModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

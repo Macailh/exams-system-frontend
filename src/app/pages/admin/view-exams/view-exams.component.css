@@ -1,0 +1,21 @@
+mat-card div {
+  margin: 0 auto;
+  max-width: 600px;
+}
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+mat-card-content form {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: fit-content;
+}
