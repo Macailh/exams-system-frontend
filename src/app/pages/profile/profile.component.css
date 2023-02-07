@@ -1,0 +1,29 @@
+mat-card-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 150px;
+  width: 200px;
+}
+
+mat-card-content div {
+  width: 100%;
+}
+
+mat-card-content table {
+  text-align: left;
+}
+mat-card-content h2 {
+  text-align: left;
+}
+td {
+  padding-right: 15px;
+}
+
+button {
+  width: fit-content;
+}
