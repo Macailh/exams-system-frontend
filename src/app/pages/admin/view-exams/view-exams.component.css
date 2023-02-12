@@ -2,6 +2,7 @@ mat-card div {
   margin: 0 auto;
   max-width: 600px;
 }
+
 mat-card-content {
   display: flex;
   justify-content: center;
