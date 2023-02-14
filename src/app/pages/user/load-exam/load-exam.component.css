@@ -3,6 +3,11 @@ mat-card div {
   max-width: 600px;
 }
 
+mat-card-header p {
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
 mat-card-content {
   display: flex;
   justify-content: center;
