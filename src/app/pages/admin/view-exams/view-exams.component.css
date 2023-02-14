@@ -9,14 +9,10 @@ mat-card-content {
   align-content: center;
 }
 
-mat-card-content form {
+mat-card-actions {
+  justify-content: space-between;
   width: 100%;
 }
-
-mat-form-field {
-  width: 100%;
-}
-
 button {
   width: fit-content;
 }
