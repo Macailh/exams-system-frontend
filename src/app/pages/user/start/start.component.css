@@ -1,0 +1,50 @@
+.container,
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.content mat-card {
+  min-height: 90vh;
+}
+
+.main {
+  padding: 15px;
+}
+
+.left-sidebar {
+  padding: 15px;
+}
+
+.right-sidebar {
+  padding: 15px;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+mat-card-actions {
+  justify-content: center;
+}
+
+@media all and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main {
+    flex: 3;
+    order: 2;
+    min-height: 90vh;
+  }
+  .left-sidebar {
+    order: 1;
+    flex: 1;
+    min-height: 90vh;
+  }
+  .right-sidebar {
+    flex: 1;
+    order: 3;
+  }
+}
