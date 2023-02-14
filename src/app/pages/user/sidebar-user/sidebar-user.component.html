@@ -1,15 +1,15 @@
 <mat-card>
   <mat-action-list>
     <div mat-subheader>Categorías disponibles</div>
-    <button routerLink="/user-dashboard/0" mat-list-item>
-      <mat-icon mat-list-icon>quiz</mat-icon>Exámenes
-    </button>
     <button
       [routerLink]="'/user-dashboard/' + c.id"
       mat-list-item
       *ngFor="let c of categories"
     >
       <mat-icon mat-list-icon>account_circle</mat-icon> {{ c.title }}
+    </button>
+    <button routerLink="/user-dashboard/0" mat-list-item>
+      <mat-icon mat-list-icon>quiz</mat-icon>Todos
     </button>
   </mat-action-list>
 </mat-card>
