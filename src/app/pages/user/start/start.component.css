@@ -1,4 +1,6 @@
-.container,
+.container {
+  font-size: large;
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,7 @@
 
 .right-sidebar {
   padding: 15px;
+  font-size: large;
 }
 
 mat-card-header {

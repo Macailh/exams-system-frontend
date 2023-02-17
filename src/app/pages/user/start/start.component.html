@@ -1,32 +1,34 @@
-<div>
+<div class="container">
   <div *ngIf="!isSend" class="content">
     <mat-card class="left-sidebar">
       <mat-card-content>
-        <h3><b>Instrucciones</b></h3>
-        <p>
-          No actualice la página, de lo contrario obtendrá nuevas preguntas en
-          este cuestionario
-        </p>
-        <p>No cambies las pestañas</p>
+        <h2>Instrucciones</h2>
+        <ul>
+          <li>
+            No actualice la página, de lo contrario obtendrá nuevas preguntas en
+            este cuestionario
+          </li>
+          <li>No cambies las pestañas</li>
+        </ul>
       </mat-card-content>
     </mat-card>
 
     <div class="main">
-      <!--Preguntas-->
-      <ng-container *ngIf="questions">
-        <h1 class="mt20">
-          En curso <b>{{ questions[0].exam.title }}</b>
-        </h1>
-      </ng-container>
-
       <mat-card *ngFor="let p of questions; let i = index">
         <mat-card-content>
+          <mat-card-header>
+            <mat-card-title>
+              <h1>
+                En curso <b>{{ questions[0].exam.title }}</b>
+              </h1>
+            </mat-card-title>
+          </mat-card-header>
           <p>
             <b>{{ i + 1 }}) </b> <span [innerHTML]="p.content"></span>
           </p>
           <mat-divider></mat-divider>
-          <div class="row mt20">
-            <div class="col-md-8 mt10">
+          <div>
+            <div>
               <input
                 [(ngModel)]="p.givenAnswer"
                 type="radio"
@@ -35,7 +37,7 @@
               />
               {{ p.option1 }}
             </div>
-            <div class="col-md-8 mt10">
+            <div>
               <input
                 [(ngModel)]="p.givenAnswer"
                 type="radio"
@@ -44,7 +46,7 @@
               />
               {{ p.option2 }}
             </div>
-            <div class="col-md-8 mt10">
+            <div>
               <input
                 [(ngModel)]="p.givenAnswer"
                 type="radio"
@@ -53,7 +55,7 @@
               />
               {{ p.option3 }}
             </div>
-            <div class="col-md-8 mt10">
+            <div>
               <input
                 [(ngModel)]="p.givenAnswer"
                 type="radio"
@@ -70,15 +72,14 @@
     <!--Progreso-->
     <mat-card class="right-sidebar">
       <mat-card-header>
-        <mat-card-title> Temporizador </mat-card-title>
-        <mat-card-subtitle>
-          El cuestionario se enviará automáticamente cuando el temporizador
-          llegue 0:0
-        </mat-card-subtitle>
+        <mat-card-title> <h2>Temporizador</h2> </mat-card-title>
       </mat-card-header>
-      <br />
+      <p>
+        El cuestionario se enviará automáticamente cuando el temporizador llegue
+        0:0
+      </p>
       <mat-card-content>
-        <h1 class="text-center">{{ getFormatTime() }}</h1>
+        <h1>{{ getFormatTime() }}</h1>
         <mat-spinner
           mode="determinate"
           style="margin: auto"
