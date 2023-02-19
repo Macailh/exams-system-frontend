@@ -1,0 +1,17 @@
+mat-card div {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+mat-card-content {
+  text-align: left;
+  word-break: break-all;
+}
+
+mat-card-actions {
+  justify-content: space-between;
+  width: 100%;
+}
+button {
+  width: fit-content;
+}

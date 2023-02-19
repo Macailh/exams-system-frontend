@@ -1,59 +1,63 @@
-<h1>Preguntas de {{ title }}</h1>
-<button
-  mat-raised-button
-  color="primary"
-  [routerLink]="'/admin/add-question/' + id + '/' + title"
->
-  Agregar pregunta
-</button>
-
 <mat-card *ngFor="let q of questions; let i = index">
-  <mat-card-content>
-    <p>
-      <b>{{ i + 1 }})</b>
-      <span [innerHTML]="q.content"></span>
-    </p>
-    <div>
-      <div>
-        <div>
-          <p>
-            A)<b> {{ q.option1 }}</b>
-          </p>
-        </div>
-        <div>
-          <p>
-            B)<b> {{ q.option2 }}</b>
-          </p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <p>
-            C)<b> {{ q.option3 }}</b>
-          </p>
-        </div>
-        <div>
-          <p>
-            D)<b> {{ q.option4 }}</b>
-          </p>
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-      <p>
-        <b>Respuesta correcta : {{ q.answer }}</b>
-      </p>
-    </div>
-  </mat-card-content>
-  <mat-card-actions>
+  <h1>Preguntas de {{ title }}</h1>
+  <div>
     <button
       mat-raised-button
-      [routerLink]="'/admin/questions/' + q.id"
       color="primary"
+      [routerLink]="'/admin/add-question/' + id + '/' + title"
     >
-      Actualizar
+      Agregar pregunta
     </button>
-    <button mat-raised-button (click)="deleteQuestion(q.id)" color="warn">
-      Eliminar
-    </button>
-  </mat-card-actions>
+  </div>
+  <br />
+  <div>
+    <mat-card-content>
+      <p>
+        <b>{{ i + 1 }})</b>
+        <span [innerHTML]="q.content"></span>
+      </p>
+      <div>
+        <div>
+          <div>
+            <p>
+              A)<b> {{ q.option1 }}</b>
+            </p>
+          </div>
+          <div>
+            <p>
+              B)<b> {{ q.option2 }}</b>
+            </p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>
+              C)<b> {{ q.option3 }}</b>
+            </p>
+          </div>
+          <div>
+            <p>
+              D)<b> {{ q.option4 }}</b>
+            </p>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <p>
+          <b>Respuesta correcta : {{ q.answer }}</b>
+        </p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        [routerLink]="'/admin/questions/' + q.id"
+        color="primary"
+      >
+        Actualizar
+      </button>
+      <button mat-raised-button (click)="deleteQuestion(q.id)" color="warn">
+        Eliminar
+      </button>
+    </mat-card-actions>
+  </div>
 </mat-card>
