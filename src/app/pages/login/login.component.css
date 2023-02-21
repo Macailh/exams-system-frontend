@@ -1,1 +1,4 @@
-
+.container {
+    height: 80vh;
+    justify-content: center;
+}
