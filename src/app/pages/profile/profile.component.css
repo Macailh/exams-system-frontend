@@ -1,3 +1,7 @@
+mat-card div {
+  margin: 0 auto;
+  max-width: 600px;
+}
 mat-card-content {
   display: flex;
   justify-content: space-between;
@@ -17,9 +21,15 @@ mat-card-content div {
 mat-card-content table {
   text-align: left;
 }
+
 mat-card-content h2 {
   text-align: left;
 }
+
+mat-card-actions {
+  justify-content: space-around;
+}
+
 td {
   padding-right: 15px;
 }

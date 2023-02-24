@@ -1,43 +1,45 @@
 <mat-card>
   <h1>Detalles del perfil</h1>
   <br />
-  <mat-card-content>
-    <div>
-      <img
-        src="https://xsgames.co/randomusers/avatar.php?g=male"
-        alt="Profile picture"
-      />
-    </div>
-    <br />
-    <div>
-      <h2>{{ user.name }} {{ user.lastname }}</h2>
-      <table>
-        <tr>
-          <td>Username:</td>
-          <td>{{ user.username }}</td>
-        </tr>
-        <tr>
-          <td>ID:</td>
-          <td>{{ user.id }}</td>
-        </tr>
-        <tr>
-          <td>Teléfono:</td>
-          <td>{{ user.phone }}</td>
-        </tr>
-        <tr>
-          <td>Rol:</td>
-          <td>{{ user.authorities[0].authority }}</td>
-        </tr>
-        <tr>
-          <td>Estado:</td>
-          <td>{{ user.enabled ? "Activo" : "No activo" }}</td>
-        </tr>
-      </table>
-    </div>
-  </mat-card-content>
-  <br />
   <div>
-    <button mat-raised-button color="primary">Actualizar</button>
-    <button mat-raised-button color="accent">Compartir</button>
+    <mat-card-content>
+      <div>
+        <img
+          src="https://xsgames.co/randomusers/avatar.php?g=male"
+          alt="Profile picture"
+        />
+      </div>
+      <br />
+      <div>
+        <h2>{{ user.name }} {{ user.lastname }}</h2>
+        <table>
+          <tr>
+            <td>Username:</td>
+            <td>{{ user.username }}</td>
+          </tr>
+          <tr>
+            <td>ID:</td>
+            <td>{{ user.id }}</td>
+          </tr>
+          <tr>
+            <td>Teléfono:</td>
+            <td>{{ user.phone }}</td>
+          </tr>
+          <tr>
+            <td>Rol:</td>
+            <td>{{ user.authorities[0].authority }}</td>
+          </tr>
+          <tr>
+            <td>Estado:</td>
+            <td>{{ user.enabled ? "Activo" : "No activo" }}</td>
+          </tr>
+        </table>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Actualizar</button>
+      <button mat-raised-button color="accent">Compartir</button>
+    </mat-card-actions>
   </div>
+  <br />
 </mat-card>
