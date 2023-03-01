@@ -1,6 +1,7 @@
 # Exam system frontend
 
 This is a small system made with angular for the frontend and spring boot on the backend.
+[See project backend](https://github.com/tu-usuario/backend-proyecto)
 
 ## Login
 
